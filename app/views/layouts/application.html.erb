@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+  <!-- Mobile Responsiveness? -->
+    <meta name="viewport" content="width=320" />
+  <title>Surf & Paddle Co.</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="page">
+      <header id="top">
+        <div class="opacity">
+          <nav>
+            <ul>
+              <%= image_tag"Logo.png", class:"logo"%>
+              <li class="blog-title">SURF & PADDLE CO. BLOG</li>
+              <li id="search" class="navright"><a href="searchfunction">SEARCH<%= image_tag"search.png" %></a></li>
+              <li class="navright"><a href="About.html">ABOUT</a></li>
+            </ul>
+          </nav>
+          <h1>SURF & PADDLE CO.</h1>
+          <p>An Ironyard Academy Project Est. Fall 2013</p>
+        </div>
+      </header>
+      <div class="main-content">
+        <article id="Content">
+          <h2><%= @post_header || "Most Interesting Post"%> </h2>
+          <p class="author"><%= image_tag"Anne-Icon.png"%>
+            <a href="Annemarie.com">Anne Marie</a> on <span> Monday Oct. 7th 9:22pm</span>
+          </p>
+          <p>
+             Distillery pop-up Intelligentsia gluten-free. Sartorial cred wolf Etsy.
+             Wes Anderson umami street art Odd Future, Thundercats locavore plaid.
+             Beard drinking vinegar photo booth Thundercats, hashtag Carles paleo
+             trust fund polaroid kitsch mastercleanse banjo Etsy roof party butcher polaroid cardigan.
+          </p>
+          <p>
+              Twee photo booth Carles, paleo Tumblr Portland normcore fixie street
+              art polaroid cardigan aesthetic. PBR food truck you probably haven't
+              heard of them, jean shorts Echo Park <a href="whateverseitan.com">whatever seitan</a>.
+          </p>
+          <blockquote>WOAH, THAT'S RADICAL!</blockquote>
+          <p>
+            Pitchfork gluten-free flannel, narwhal umami chambray Brooklyn taxidermy
+            sustainable paleo. Wolf chia small batch, DIY locavore wayfarers pug fap
+            artisan cray fingerstache lo-fi. Dreamcatcher migas <a href="sriracha.com">
+            sriracha</a> forage. Selvage twee ennui vegan, photo booth deep v Williamsburg
+            cardigan mumblecore ugh PBR&B farm-to-table tattooed sustainable beard.
+            Scenester cliche kitsch Austin, banjo flannel meditation next level Bushwick
+            you probably haven't heard of them. YOLO cred kogi tote bag gluten-free
+            Etsy viral. Forage cray cronut, cardigan readymade Shoreditch lomo Truffaut
+            Tumblr meditation. Farm-to-table narwhal pug literally hashtag.
+          </p>
+          <p>
+            Farm-to-table narwhal pug literally hashtag, locavore hella lomo.
+            Mustache Shoreditch meditation, roof party Tumblr master cleanse farm-to-table
+            fanny pack +1 scenester Intelligentsia listicle cliche. Tattooed taxidermy
+            sustainable, semiotics sartorial Banksy.
+          </p>
+          <a href="Morecomments.com">
+            <%= image_tag"Read-Comments-Icon.png"%><%= image_tag"Read-Comments-Text.png", class:"IconText"%>
+          </a>
+          </a>
+          <a href="javascriptfunction">
+            <%= image_tag"Read-Later-Icon.png"%><%= image_tag"Read-Later-Text.png", class:"IconText"%>
+          </a>
+          <a href="http://twitter.com/share?text=An%20Awesome%20Post&url=http://www.martinbee.github.io/week3">
+            <%= image_tag"Share-Icon.png"%><%= image_tag"Share-Text.png", class:"IconText"%>
+          </a>
+        </article>
+        <aside>
+          <div class="profile">
+            <%= image_tag"AnneMarie.png"%>
+            <p><a href="Annemarie.com"><span>ANNE MARIE</span></a></p>
+            <p><a href="twitter.com">Twitter</a> <a href="facebook.com">Facebook</a>
+              <a href="instagram.com">Instagram</a>
+            </p>
+          </div>
+          <%= image_tag"Lady.png", class:"lady"%>
+          <a class="ad" href="paddleboardingisfun.com">About This Ad</a>
+          <h2>SIDEBAR SECTION HEADING</h2>
+          <p class="sidebartext">
+            Twee photo booth Carles, paleo Tumblr Portland normcore fixie street
+            art polaroid cardigan aesthetic. PBR food truck you probably haven't
+            heard of them, jean shorts Echo Park <a class="seitan" href="whateverseitan.com">whatever seitan</a>.
+            Narwhal pug literally hashtag, locavore hella lomo
+            mustache.
+          </p>
+        </aside>
+      </div>
+      <div class="posts">
+        <h2>MOST POPULAR POSTS</h2>
+        <ul>
+          <% @post_titles.each do |post_name| %>
+            <% if params[:name] == post_name %>
+            <%= puts "hi" %>
+            <% else %>
+            <li style="background: url(<%= image_url("#{post_name.parameterize}.jpg") %>); background-repeat: no-repeat; background-size: cover;">
+              <div class="post-opacity">
+              <%= link_to post_name, page_path(name: post_name) %>
+              </div>
+            </li>
+            <% end %>
+          <% end %>
+        </ul>
+
+
+      </div>
+      <footer>
+        <ul>
+          <%= image_tag "TIY.png", class:"logo" %>
+          <li>The Ironyard Copyright 2013,<span> All Rights Reserved</span></li>
+          <li id="lastfooteritem"class="footerright"><a href="#search">Search</a></li>
+          <li class="footerright"><a href="About.html">About</a></li>
+          <li class="footerright"><a href="#Content">Content</a></li>
+          <li class="footerright"><a href="#top">Top</a></li>
+        </ul>
+      </footer>
+    </div>
+
+
+<%= yield %>
+
+</body>
+</html>
