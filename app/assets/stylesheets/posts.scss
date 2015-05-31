@@ -263,18 +263,17 @@
    border-top: 1px solid rgba(226,231,234,1);
    ul {
      padding: 0px;
-     li {
-       height: 325px; width: 25%; float: left;
-       a {
-        text-decoration: none;
-        display: inline block;
-        color: rgb(21,53,79);;
-        font-family: "Oswald";
-        font-size: 2em;
-        &:hover {
-          color: white;
-        }
+     a {
+       text-decoration: none;
+       color: rgb(21,53,79);;
+       font-family: "Oswald";
+       font-size: 2em;
+       &:hover {
+         color: white;
       }
+        li {
+          height: 325px; width: 25%; float: left;
+        }
     }
    }
  }
@@ -296,13 +295,13 @@
    color: white;
  }
 
- .post-opacity {
-   height:325px;
+ .hey {
+   background-size: cover;
    background-color: rgba(18, 110, 180, .65);
    z-index: 100;
  }
 
- .post-opacity:hover {
+ .post-links:hover {
    background-color: rgba(18, 110, 200, .3);
  }
 
@@ -425,12 +424,12 @@
      line-height: 1.5em;
      margin-left: -10px;
      margin-right: 30px;
-    }
+     }
 
      img {
      margin-right: 4px;
+     }
    }
- }
 
    .IconText {
      display: none;

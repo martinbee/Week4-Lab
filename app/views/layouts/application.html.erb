@@ -30,12 +30,12 @@
       </header>
       <div class="main-content">
         <article id="Content">
-          <h2><%= @post_header || "Most Interesting Post"%> </h2>
+          <h2> <%= @selected_post.title || "Most Interesting Post"%> </h2>
           <p class="author"><%= image_tag"Anne-Icon.png"%>
             <a href="Annemarie.com">Anne Marie</a> on <span> Monday Oct. 7th 9:22pm</span>
           </p>
+          <h3><%= @selected_post.content %></h3>
           <p>
-             Distillery pop-up Intelligentsia gluten-free. Sartorial cred wolf Etsy.
              Wes Anderson umami street art Odd Future, Thundercats locavore plaid.
              Beard drinking vinegar photo booth Thundercats, hashtag Carles paleo
              trust fund polaroid kitsch mastercleanse banjo Etsy roof party butcher polaroid cardigan.
@@ -96,18 +96,17 @@
       </div>
       <div class="posts">
         <h2>MOST POPULAR POSTS</h2>
-        <ul>
-          <% @post_titles.each do |post_name| %>
-            <% if params[:name] == post_name %>
-            <%= puts "hi" %>
-            <% else %>
-            <li style="background: url(<%= image_url("#{post_name.parameterize}.jpg") %>); background-repeat: no-repeat; background-size: cover;">
-              <div class="post-opacity">
-              <%= link_to post_name, page_path(name: post_name) %>
-              </div>
-            </li>
-            <% end %>
+        <ul class="post-links">
+          <% @other_posts.each do |post| %>
+            <div>
+              <%= link_to page_path(name: post.title) do %>
+                <li style="background: url(<%= image_url(post.image) %>); background-repeat: no-repeat; background-size: cover;">
+                  <%= post.title %>
+                <li>
+              <% end %>
+            </div>
           <% end %>
+        </div>
         </ul>
 
 
