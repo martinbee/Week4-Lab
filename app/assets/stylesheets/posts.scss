@@ -263,6 +263,9 @@
    border-top: 1px solid rgba(226,231,234,1);
    ul {
      padding: 0px;
+     li {
+       height: 325px; width: 25%; float: left;
+     }
      a {
        text-decoration: none;
        color: rgb(21,53,79);;
@@ -295,15 +298,18 @@
    color: white;
  }
 
- .hey {
+ .opacity-posts {
+   height: 325px;
+   width: 100%;
    background-size: cover;
    background-color: rgba(18, 110, 180, .65);
    z-index: 100;
+   &:hover {
+     background-color: rgba(18, 110, 200, .3);
+   }
  }
 
- .post-links:hover {
-   background-color: rgba(18, 110, 200, .3);
- }
+
 
 
  footer {

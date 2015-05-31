@@ -96,20 +96,19 @@
       </div>
       <div class="posts">
         <h2>MOST POPULAR POSTS</h2>
-        <ul class="post-links">
+        <ul>
           <% @other_posts.each do |post| %>
-            <div>
               <%= link_to page_path(name: post.title) do %>
+
                 <li style="background: url(<%= image_url(post.image) %>); background-repeat: no-repeat; background-size: cover;">
+                  <div class="opacity-posts">
                   <%= post.title %>
-                <li>
+                </div>
+                </li>
+
               <% end %>
-            </div>
           <% end %>
-        </div>
         </ul>
-
-
       </div>
       <footer>
         <ul>
