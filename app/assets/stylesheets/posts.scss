@@ -10,385 +10,388 @@
    height: 100%;
  }
 
- header {
-   height: 520px;
-   margin: 0;
-   background: url('/assets/Waves.jpg') no-repeat;
-   background-size: cover;
+header {
+  height: 520px;
+  margin: 0;
+  background: url('/assets/Waves.jpg') no-repeat;
+  background-size: cover;
+  h1, p {
+    text-align: center;
+  }
+  h1 {
+    color: white;
+    padding-top: 11.5%;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 7.7vw;
+    margin: 0;
+  }
+  p {
+    color: rgba(15, 41, 61, .8);
+    padding-top: 0px;
+    font-size: 1.25vw;
+    font-family: "asap", sans-serif;
+    margin-top: -8px;
+  }
+}
+
+.opacity {
+ height: 520px;
+ margin: auto;
+ background-color: rgba(18, 110, 200, .75);
+ z-index: 2;
+}
+
+nav {
+  width: 85%;
+  height: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  li {
+    color: rgb(21,53,78);
+    z-index: 3;
+    padding-right: 15px;
+    position: relative;
+    bottom: 20px;
+    font-size: 1em;
+    font-family: "open sans";
+    font-style: strong;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(21,53,78)
+  }
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  display: inline;
+}
+
+.logo {
+  margin-right: 8px;
+  margin-top: 7px
+}
+
+.navright {
+  float:right;
+  clear: left;
+  position: relative;
+  top: 15px;
+  right:60px;
+  font-family: "Oswald";
+  font-size: 1.12em;
+}
+
+.main-content {
+  width: 80%;
+  margin: auto;
  }
 
- .opacity {
-   height: 520px;
-   margin: auto;
-   background-color: rgba(18, 110, 200, .75);
-   z-index: 2;
- }
+article {
+  width: 60%;
+  float:left;
+  margin-left: 25px;
+  margin-bottom: 65px;
+  margin-right: 55px;
+  margin-top: 13px;
+  a{
+     text-decoration: none;
+  }
+  img {
+    margin-right: 8px;
+  }
+  blockquote {
+    color: rgb(48,112,173);
+    border-left: 2px solid rgb(211,211,211);
+    padding: 13px;
+    font-size: 1.6em;
+    font-family: "ubuntu";
+    font-weight:bold;
+    position: relative;
+    right: 30px;
+   }
+  p {
+    font-size:1em;
+    color: rgb(120,120,130);
+    font-family: "asap";
+    line-height: 1.7em;
+    margin-top: 25px;
+    img {
+      width:24px;
+      margin-right: 2px;
+    }
+    a {
+      color: rgb(166,179,189);
+      text-decoration: underline;
+      &:hover {
+       color: rgb(48,112,173);
+       text-decoration: underline;
+      }
+    }
+  }
+  h2 {
+    color: rgb(20,51,76);
+    font-family: "Oswald";
+    font-size: 3.76em;
+    line-height: 1.1em;
+  }
+}
 
- nav {
-   width: 85%;
-   height: 10%;
-   margin-left: auto;
-   margin-right: auto;
- }
-
- ul {
-     margin: 0;
- }
-
- li {
-   display: inline;
- }
-
- .logo {
-   margin-right: 8px;
-   margin-top: 7px
- }
-
- nav li {
-   color: rgb(21,53,78);
-   z-index: 3;
-   padding-right: 15px;
-   position: relative;
-   bottom: 20px;
-   font-size: 1em;
-   font-family: "open sans";
-   font-style: strong;
- }
-
- nav a {
-   text-decoration: none;
-   color: rgb(21,53,78)
-
- }
-
- .navright {
-   float:right;
-   clear: left;
-   position: relative;
-   top: 15px;
-   right:60px;
-   font-family: "Oswald";
-   font-size: 1.12em;
- }
-
- header h1, header p {
-   text-align: center;
- }
-
- header h1 {
-   color: white;
-   padding-top: 11.5%;
-   font-family: "Ubuntu", sans-serif;
-   font-size: 7.7vw;
-   margin: 0;
- }
-
- header p {
-   color: rgba(15, 41, 61, .8);
-   padding-top: 0px;
-   font-size: 1.25vw;
-   font-family: "asap", sans-serif;
-   margin-top: -8px;
- }
-
- .main-content {
-   width: 80%;
-   margin: auto;
-
- }
-
- article {
-   width: 60%;
-   float:left;
-   margin-left: 25px;
-   margin-bottom: 65px;
-   margin-right: 55px;
-   margin-top: 13px;
- }
-
- article p {
-   font-size:1em;
-   color: rgb(120,120,130);
-   font-family: "asap";
-   line-height: 1.7em;
-   margin-top: 25px;
- }
-
- article h2 {
-   color: rgb(20,51,76);
-   font-family: "Oswald";
-   font-size: 3.76em;
-   line-height: 1.1em;
- }
-
- .author {
-   margin-top: -45px;
-   color: rgb(166,179,189);
-   font-size: .9em;
- }
-
- .author span {
-   text-decoration: underline;
- }
-
-
- .author a {
+.author {
+  margin-top: -45px;
+  color: rgb(166,179,189);
+  font-size: .9em;
+  span {
+    text-decoration: underline;
+  }
+  a {
    text-decoration: none;
    margin-right: 10px;
    color: rgb(48,112,173)
  }
+}
 
- article p img {
-   width:24px;
-   margin-right: 2px;
- }
+.IconText {
+  margin-left: -8px;
+}
 
- article p a {
-   color: rgb(166,179,189);
-   text-decoration: underline;
- }
-
- article p a:hover {
-   color: rgb(48,112,173);
-   text-decoration: underline;
- }
-
- article blockquote {
-   color: rgb(48,112,173);
-   border-left: 2px solid rgb(211,211,211);
-   padding: 13px;
-   font-size: 1.6em;
-   font-family: "ubuntu";
-   font-weight:bold;
-   position: relative;
-   right: 30px;
- }
-
- article img {
-   margin-right: 8px;
- }
-
- .IconText {
-   margin-left: -8px;
- }
-
- article a{
-   text-decoration: none;
- }
-
- aside {
-   width: 32%;
-   float:left;
-   margin-bottom: 100px;
-   margin-top: 70px;
- }
-
- aside img {
-   display:block;
-   margin-left: auto;
-   margin-right: auto;
- }
-
- .lady {
-   margin-top: 52px;
- }
-
- aside p {
-   text-align: center;
-   margin: auto;
-   font-family: asap;
- }
-
- aside a {
-   text-decoration: none;
-   color: rgb(166,179,189);
-   padding-left: 5px;
-   padding-right: 5px;
-   font-size: .85em;
-   position: relative;
-   top: 5px;
-   font-family: asap;
- }
-
- aside span {
-   color: rgb(48,112,173);
-   font-family: asap;
-   font-size: 1.25em;
-   position: relative;
-   bottom: 2px;
- }
-
- .ad {
-   text-decoration: underline;
-   position: relative;
-   left: 200px;
-   padding-left: 20px;
- }
-
- aside h2 {
-   font-family: asap;
-   color: rgb(48,112,173);
-   font-size: 1.1em;
-   margin-top: 50px;
-   width:279px;
-   margin-left: 28px;
-   margin-bottom: 9px;
- }
-
- .seitan {
-   color: rgb(166,179,189);
-   text-decoration: underline;
-   padding: 0;
-   position: static;
-   font-size: 1em;
- }
-
- .seitan:hover {
-   color: rgb(48,112,173);
-   text-decoration: underline;
- }
-
-
- .sidebartext {
-   color: rgb(166,179,189);
-   width:279px;
-   margin: auto;
-   text-align: left;
-   font-size: .9em;
-   line-height: 1.6em;
- }
-
- .posts {
-   clear: both;
-   border-top: 1px solid rgba(226,231,234,1);
-   ul {
-     padding: 0px;
-     li {
-       height: 325px; width: 25%; float: left;
-     }
-     a {
-       text-decoration: none;
-       color: rgb(21,53,79);;
-       font-family: "Oswald";
-       font-size: 2em;
-       &:hover {
-         color: white;
-      }
-        li {
-          height: 325px; width: 25%; float: left;
-        }
+aside {
+  width: 32%;
+  float:left;
+  margin-bottom: 100px;
+  margin-top: 70px;
+  img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+     text-align: center;
+     margin: auto;
+     font-family: asap;
+   }
+  a {
+    text-decoration: none;
+    color: rgb(166,179,189);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: .85em;
+    position: relative;
+    top: 5px;
+    font-family: asap;
+  }
+  span {
+    color: rgb(48,112,173);
+    font-family: asap;
+    font-size: 1.25em;
+    position: relative;
+    bottom: 2px;
+   }
+   h2 {
+     font-family: asap;
+     color: rgb(48,112,173);
+     font-size: 1.1em;
+     margin-top: 50px;
+     width:279px;
+     margin-left: 28px;
+     margin-bottom: 9px;
     }
+ }
+
+
+.lady {
+  margin-top: 52px;
+}
+
+.ad {
+  text-decoration: underline;
+  position: relative;
+  left: 200px;
+  padding-left: 20px;
+}
+
+.seitan {
+  color: rgb(166,179,189);
+  text-decoration: underline;
+  padding: 0;
+  position: static;
+  font-size: 1em;
+}
+
+.seitan:hover {
+  color: rgb(48,112,173);
+  text-decoration: underline;
+}
+
+
+.sidebartext {
+  color: rgb(166,179,189);
+  width:279px;
+  margin: auto;
+  text-align: left;
+  font-size: .9em;
+  line-height: 1.6em;
+}
+
+.posts {
+  clear: both;
+  border-top: 1px solid rgba(226,231,234,1);
+  ul {
+    padding: 0px;
+   li {
+     height: 325px; width: 25%; float: left;
+    }
+    h2 {
+      text-align: center;
+      color: rgb(20,51,76);
+      font-family: "Oswald";
+      font-size: 3.76em;
+      line-height: 1.1em;
+      margin-top: 36px;
+      margin-bottom: 40px;
+     }
+     p:hover {
+      color: white;
+      }
+    a {
+     text-decoration: none;
+     color: rgb(21,53,79);;
+     font-family: "Oswald";
+     font-size: 2em;
+     &:hover {
+       color: white;
+    }
+      li {
+        height: 325px; width: 25%; float: left;
+      }
+  }
+  }
+ }
+
+.opacity-posts {
+  height: 325px;
+  width: 100%;
+  background-size: cover;
+  background-color: rgba(18, 110, 180, .65);
+  z-index: 100;
+  &:hover {
+    background-color: rgba(18, 110, 200, .3);
+  }
+ }
+
+footer {
+ clear:both;
+  background-color: rgb(5, 52, 82);
+  height: 100px;
+  padding-top: 17px;
+ }
+
+footer ul {
+  max-width: 78.1%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0;
+ }
+
+footer li {
+  color: rgb(167,179,189);
+  font-family: "asap";
+  font-size: .9em;
+  position: relative;
+  bottom: 18px;
+ }
+
+.footerright {
+  float:right;
+  clear: left;
+  position: relative;
+  top: 28px;
+  right:60px;
+  font-family: "asap";
+  font-size: .9em;
+  padding-left: 8px;
+  padding-right:8px;
+  border-right: 1px solid rgb(90,104,110);
+ }
+
+footer #lastfooteritem {
+  border-right: none;
+ }
+
+footer a {
+ text-decoration: none;
+ color: rgb(167,179,189);
+ }
+
+@media (max-width: 1266px) {
+  header {
+    height: 380px;
+  }
+
+  .opacity {
+     height: 380px;
    }
- }
 
-
- .posts h2 {
-   text-align: center;
-   color: rgb(20,51,76);
-   font-family: "Oswald";
-   font-size: 3.76em;
-   line-height: 1.1em;
-   margin-top: 36px;
-   margin-bottom: 40px;
- }
-
-
-
- .posts p:hover {
-   color: white;
- }
-
- .opacity-posts {
-   height: 325px;
-   width: 100%;
-   background-size: cover;
-   background-color: rgba(18, 110, 180, .65);
-   z-index: 100;
-   &:hover {
-     background-color: rgba(18, 110, 200, .3);
+   article {
+     width: 80%;
+     padding: 0;
+     margin-left: 50px;
    }
- }
 
-
-
-
- footer {
-   clear:both;
-   background-color: rgb(5, 52, 82);
-   height: 100px;
-   padding-top: 17px;
- }
-
- footer ul {
-   max-width: 78.1%;
-   margin-left: auto;
-   margin-right: auto;
-   margin-top:0;
- }
-
- footer li {
-   color: rgb(167,179,189);
-   font-family: "asap";
-   font-size: .9em;
-   position: relative;
-   bottom: 18px;
- }
-
- .footerright {
-   float:right;
-   clear: left;
-   position: relative;
-   top: 28px;
-   right:60px;
-   font-family: "asap";
-   font-size: .9em;
-   padding-left: 8px;
-   padding-right:8px;
-   border-right: 1px solid rgb(90,104,110);
- }
-
- footer #lastfooteritem {
-   border-right: none;
- }
-
- footer a {
-   text-decoration: none;
-   color: rgb(167,179,189);
+   aside {
+     margin-top: 0px;
+     width: 100%;
+     padding: 0;
+     .ad {
+       display: block;
+       width: 53%;
+       text-align: center;
+     }
+     h2 {
+       margin-left: 0;
+       width: 100%;
+       text-align: center;
+     }
+   }
  }
 
  /*phone css*/
- @media (max-width: 768px) {
+@media (max-width: 768px) {
 
-   .page {
+  .page {
      max-width: 325px;
    }
 
    header {
      height: 170px;
+     h1 {
+       position: relative;
+       top: 50px;
+       font-size: 1.85em;
+     }
+     p {
+       position: relative;
+       top: 60px;
+       font-size: .9em;
+
+     }
    }
 
-   .navright {
-     position: relative;
-     right: 35px;
+  .navright {
+    position: relative;
+    right: 35px;
+    bottom: 100px;
+    display: inline;
+    padding: 10px;
    }
 
    .logo {
      position: relative;
      top: 42px;
      left: 72.5px;
-   }
-
-   header h1 {
-     position: relative;
-     top: 50px;
-     font-size: 1.85em;
-   }
-
-   header p {
-     position: relative;
-     top: 60px;
-     font-size: .9em;
-
    }
 
    .opacity {
@@ -403,120 +406,134 @@
      width: 89%;
    }
 
-   article h2 {
-     font-size: 3em;
+   article {
+     margin-top: 80px;
+     h2 {
+       font-size: 3em;
+       display: block;
+     }
    }
 
    .author {
-     margin-top: -33px;
+     margin-top: 10px;
+     img {
+        display: none;
+      }
+      a {
+        display: none;
+      }
    }
 
-   .author img {
-     display: none;
+
+  article {
+   width: 100%;
+   h2 {
+     margin: 0px;
    }
-
-   .author a {
-     display: none;
-   }
-
-
-   article {
-     width: 100%;
-     h2 {
-       margin: 0px;
-     }
-     p {
+   p {
      font-size: .93em;
      line-height: 1.5em;
      margin-left: -10px;
      margin-right: 30px;
-     }
-
-     img {
+   }
+   img {
      margin-right: 4px;
      }
    }
 
-   .IconText {
-     display: none;
+  .IconText {
+    display: none;
    }
 
-   aside {
-     width: 100%;
-     margin-top: 0px;
-     margin-bottom: 50px;
+  aside {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    p a {
+      position: static;
+      text-align: center;
+      margin: auto;
+     }
+    h2 {
+      display:none;
+     }
    }
 
-   .lady {
-     margin-top: 40px;
+  .lady {
+    margin-top: 40px;
    }
 
-   aside p a {
-     position: static;
-     text-align: center;
-     margin: auto;
+  .ad {
+    padding: 0px;
    }
 
-   .ad {
-     padding: 0px;
+  .sidebartext{
+    display:none;
    }
 
-   aside h2 {
-     display:none;
+  li {
+    padding-left: 300px;
    }
 
-   .sidebartext{
-     display:none;
+  .posts {
+    h2 {
+    font-size: 2em;
    }
+    ul {
+      width: 30%;
 
-   li {
-     padding-left: 300px;
-   }
-
-   .posts {
-     h2 {
-     font-size: 2em;
-   }
+     li {
+       width: 100%;
+       a {
+         width: 100%;
+       }
+     }
+     }
  }
 
-   footer {
-     height: 200px;
-     padding-top: 17px;
+ .opacity-posts {
+   width: 325px;
+   position: relative;
+   right: 300px;
+ }
+
+  footer {
+    height: 200px;
+    padding-top: 17px;
+    ul {
+      max-width: 100%;
+     }
+    img {
+      display: block;
+      position: relative;
+      top: 50px;
+      margin-right: auto;
+      margin-left: 23.5px;
+     }
+    li {
+      position: relative;
+      top: 50px;
+      text-align: center;
+      left: 31px;
+     }
+    span {
+      display: block;
+      position: relative;
+      right: 50px;
+    }
    }
 
-   footer ul {
-     max-width: 100%;
+  .footerright {
+    position: relative;
+    top:-90px;
+    left: -49px;
+    padding-left: 8px;
+    padding-right:8px;
+    border-right: 1px solid rgb(90,104,110);
    }
 
-   footer img {
-     display: block;
-     position: relative;
-     top: 50px;
-     margin-right: auto;
-     margin-left: 23.5px;
-   }
-
-   footer li {
-     position: relative;
-     top: 50px;
+   .copyright {
+     padding: 0px;
      text-align: center;
-     margin: auto;
-     left: 31px;
    }
-
-   .footerright {
-     position: relative;
-     top:-80px;
-     left: -49px;
-     padding-left: 8px;
-     padding-right:8px;
-     border-right: 1px solid rgb(90,104,110);
-   }
-
-   footer span {
-     display: block;
-     position: relative;
-     right: 50px;
-   }
-
  }

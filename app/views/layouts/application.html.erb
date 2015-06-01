@@ -99,13 +99,11 @@
         <ul>
           <% @other_posts.each do |post| %>
               <%= link_to page_path(name: post.title) do %>
-
                 <li style="background: url(<%= image_url(post.image) %>); background-repeat: no-repeat; background-size: cover;">
                   <div class="opacity-posts">
-                  <%= post.title %>
-                </div>
+                    <%= post.title %>
+                  </div>
                 </li>
-
               <% end %>
           <% end %>
         </ul>
@@ -113,7 +111,7 @@
       <footer>
         <ul>
           <%= image_tag "TIY.png", class:"logo" %>
-          <li>The Ironyard Copyright 2013,<span> All Rights Reserved</span></li>
+          <li class="copyright">The Ironyard Copyright 2013,<span> All Rights Reserved</span></li>
           <li id="lastfooteritem"class="footerright"><a href="#search">Search</a></li>
           <li class="footerright"><a href="About.html">About</a></li>
           <li class="footerright"><a href="#Content">Content</a></li>
