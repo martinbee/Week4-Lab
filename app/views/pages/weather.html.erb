@@ -1,0 +1,14 @@
+<div class="city" style="background: url(<%= image_url(@selected_city.image) %>); background-repeat: no-repeat;background-size: cover;">
+  <%= link_to 'Home', cities_path %>
+  <div class="background">
+    <h1><%= @selected_city.name %></h1>
+     <% @selected_city.forecast %>
+     <h4>Temperature = <%= @selected_city.temp %></h4>
+     <br>
+     <h4>Humidity = <%= @selected_city.humidity %></h4>
+     <br>
+     <h4>Rain Chance = <%= @selected_city.rain %></h4>
+     <br>
+     <h4>Forecast = <%= @selected_city.text %></h4>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<h1>Surf & Paddle Co. Weather Check!</h1>
+<ul class="weather">
+  <% @cities.each do |city| %>
+    <li><%= link_to city.name, weather_path(city: city.name) %></li>
+  <% end %>
+<ul>

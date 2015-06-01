@@ -112,6 +112,13 @@ article {
     font-weight:bold;
     position: relative;
     right: 30px;
+    a {
+      text-decoration: none;
+      color: rgb(48,112,173);
+      &:hover {
+        color: purple;
+      }
+    }
    }
   p {
     font-size:1em;
@@ -239,20 +246,20 @@ aside {
 .posts {
   clear: both;
   border-top: 1px solid rgba(226,231,234,1);
+  h2 {
+    text-align: center;
+    color: rgb(20,51,76);
+    font-family: "Oswald";
+    font-size: 3.76em;
+    line-height: 1.1em;
+    margin-top: 36px;
+    margin-bottom: 40px;
+   }
   ul {
     padding: 0px;
    li {
      height: 325px; width: 25%; float: left;
     }
-    h2 {
-      text-align: center;
-      color: rgb(20,51,76);
-      font-family: "Oswald";
-      font-size: 3.76em;
-      line-height: 1.1em;
-      margin-top: 36px;
-      margin-bottom: 40px;
-     }
      p:hover {
       color: white;
       }

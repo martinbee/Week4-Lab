@@ -2,8 +2,14 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
+  get 'posts/:name' => 'posts#show', as: :page
 
-  get ':name' => 'posts#show', as: :page
+ # weather
+
+ get 'pages/cities', as: :cities
+
+ get ':city/weather' => 'pages#weather', as: :weather
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

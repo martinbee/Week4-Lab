@@ -1,0 +1,91 @@
+<div class="main-content">
+  <article id="Content">
+    <h2> <%= @selected_post.title || "Most Interesting Post"%> </h2>
+    <p class="author"><%= image_tag"Anne-Icon.png"%>
+      <a href="Annemarie.com">Anne Marie</a> on <span> Monday Oct. 7th 9:22pm</span>
+    </p>
+    <h3><%= @selected_post.content %></h3>
+    <p>
+       Wes Anderson umami street art Odd Future, Thundercats locavore plaid.
+       Beard drinking vinegar photo booth Thundercats, hashtag Carles paleo
+       trust fund polaroid kitsch mastercleanse banjo Etsy roof party butcher polaroid cardigan.
+    </p>
+    <p>
+        Twee photo booth Carles, paleo Tumblr Portland normcore fixie street
+        art polaroid cardigan aesthetic. PBR food truck you probably haven't
+        heard of them, jean shorts Echo Park <a href="whateverseitan.com">whatever seitan</a>.
+    </p>
+    <blockquote><%= link_to "WOAH, THAT'S RADICAL! Check out the weather!", cities_path %></blockquote>
+    <p>
+      Pitchfork gluten-free flannel, narwhal umami chambray Brooklyn taxidermy
+      sustainable paleo. Wolf chia small batch, DIY locavore wayfarers pug fap
+      artisan cray fingerstache lo-fi. Dreamcatcher migas <a href="sriracha.com">
+      sriracha</a> forage. Selvage twee ennui vegan, photo booth deep v Williamsburg
+      cardigan mumblecore ugh PBR&B farm-to-table tattooed sustainable beard.
+      Scenester cliche kitsch Austin, banjo flannel meditation next level Bushwick
+      you probably haven't heard of them. YOLO cred kogi tote bag gluten-free
+      Etsy viral. Forage cray cronut, cardigan readymade Shoreditch lomo Truffaut
+      Tumblr meditation. Farm-to-table narwhal pug literally hashtag.
+    </p>
+    <p>
+      Farm-to-table narwhal pug literally hashtag, locavore hella lomo.
+      Mustache Shoreditch meditation, roof party Tumblr master cleanse farm-to-table
+      fanny pack +1 scenester Intelligentsia listicle cliche. Tattooed taxidermy
+      sustainable, semiotics sartorial Banksy.
+    </p>
+    <a href="Morecomments.com">
+      <%= image_tag"Read-Comments-Icon.png"%><%= image_tag"Read-Comments-Text.png", class:"IconText"%>
+    </a>
+    </a>
+    <a href="javascriptfunction">
+      <%= image_tag"Read-Later-Icon.png"%><%= image_tag"Read-Later-Text.png", class:"IconText"%>
+    </a>
+    <a href="http://twitter.com/share?text=An%20Awesome%20Post&url=http://www.martinbee.github.io/week3">
+      <%= image_tag"Share-Icon.png"%><%= image_tag"Share-Text.png", class:"IconText"%>
+    </a>
+  </article>
+  <aside>
+    <div class="profile">
+      <%= image_tag"AnneMarie.png"%>
+      <p><a href="Annemarie.com"><span>ANNE MARIE</span></a></p>
+      <p><a href="twitter.com">Twitter</a> <a href="facebook.com">Facebook</a>
+        <a href="instagram.com">Instagram</a>
+      </p>
+    </div>
+    <%= image_tag"Lady.png", class:"lady"%>
+    <a class="ad" href="paddleboardingisfun.com">About This Ad</a>
+    <h2>SIDEBAR SECTION HEADING</h2>
+    <p class="sidebartext">
+      Twee photo booth Carles, paleo Tumblr Portland normcore fixie street
+      art polaroid cardigan aesthetic. PBR food truck you probably haven't
+      heard of them, jean shorts Echo Park <a class="seitan" href="whateverseitan.com">whatever seitan</a>.
+      Narwhal pug literally hashtag, locavore hella lomo
+      mustache.
+    </p>
+  </aside>
+</div>
+<div class="posts">
+  <h2>MOST POPULAR POSTS</h2>
+  <ul>
+    <% @other_posts.each do |post| %>
+        <%= link_to page_path(name: post.title) do %>
+          <li style="background: url(<%= image_url(post.image) %>); background-repeat: no-repeat; background-size: cover;">
+            <div class="opacity-posts">
+              <%= post.title %>
+            </div>
+          </li>
+        <% end %>
+    <% end %>
+  </ul>
+</div>
+<footer>
+  <ul>
+    <%= image_tag "TIY.png", class:"logo" %>
+    <li class="copyright">The Ironyard Copyright 2013,<span> All Rights Reserved</span></li>
+    <li id="lastfooteritem"class="footerright"><a href="#search">Search</a></li>
+    <li class="footerright"><a href="About.html">About</a></li>
+    <li class="footerright"><a href="#Content">Content</a></li>
+    <li class="footerright"><a href="#top">Top</a></li>
+  </ul>
+</footer>
+</div>
